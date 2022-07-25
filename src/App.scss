@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  font-family: "Open Sans", Tahoma, Arial, helvetica, sans-serif;
+  color: #565656;
+}
+main {
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+}
+section {
+  padding: 60px 0;
+  h1 {
+    font-size: 40px;
+    color: #565656;
+  }
+}
+
+.header {
+  background-color: black;
+  color: white;
+}
+.navbar-expand {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  border-bottom: 2px solid #f37021;
+}
+a.nav-link {
+  text-align: center;
+  margin: 0 20px;
+  text-transform: uppercase;
+  color: #737373;
+  &:hover{
+    color:#f37021;
+  }
+}
+.offers-list {
+  margin: 40px;
+  .offers-item-wrapper {
+    padding: 40px;
+  }
+}
+.offers-item {
+  .offers-title {
+    font-size: 1.25rem;
+  }
+  .offers-description {
+    font-size: 0.7rem;
+  }
+  .offers-price {
+    font-size: 0.7rem;
+    span {
+      color: #f37021;
+      font-size: 1rem;
+    }
+  }
+}
+.cover-wrapper {
+  height: 200px;
+  background-size: 310px;
+  background-position: center;
+  transition: all 3s;
+  -webkit-transition: all 3s;
+  -o-transition: all 3s;
+  -moz-transition: all 3s;
+  &:hover {
+    background-size: 360px;
+  }
+}
+h1 {
+  text-align: center;
+}
+.offers-data {
+  svg {
+    margin-right: 5px;
+  }
+}
+.promo {
+  text-align: center;
+  color: white;
+  .stars {
+    svg {
+      margin-right: 10px;
+    }
+  }
+  .text-emphasis {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  button {
+    padding: 0.5rem 1rem;
+    background: none;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    color: #fff;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    -ms-transition: 0.2s;
+    transition: 0.2s;
+    &:hover {
+      background: #fff;
+      color: #737373;
+      border-radius: 10px;
+    }
+    svg {
+      margin-left: 10px;
+    }
+  }
+}
+
+footer {
+  background: #262626;
+  padding: 60px 0 30px 0;
+  color: #e6e6e6;
+  font-size: 11px;
+  line-height: 1.4em;
+  padding-bottom: 40px;
+  ul {
+    padding: 0;
+    li {
+      margin-bottom: 5px;
+      list-style: none;
+      a {
+        font-size: 0.9rem;
+        color: white;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+          color: white;
+        }
+      }
+    }
+  }
+  .contact {
+    .text-accent {
+      color: #f37021;
+    }
+    a {
+      text-decoration: underline;
+    }
+  }
+}

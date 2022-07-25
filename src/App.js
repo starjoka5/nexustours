@@ -1,24 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
 
+import { Col, Row, ThemeProvider } from 'react-bootstrap';
+import './App.scss';
+import Destinies from './components/Destinies';
+import Offers from './components/Offers';
+import Promo from './components/Promo';
+import Footer from './ui/Footer';
+import Header from './ui/Header';
+import Menu from './ui/Menu';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Section from './ui/Section';
+import './parallax.scss'
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider
+      breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']}
+      minBreakpoint="xxs"
+    >
+      <main>
+        <Row>
+          <Col>
+            <Header />
+            <Menu />
+          </Col>
+        </Row>
+        <Section body={<Offers />} />
+        <Section parallax body={<Promo />} styleName='promo' />
+        <Section body={<Destinies />} />
+        <Row>
+          <Col>
+            <Footer />
+          </Col>
+        </Row>
+      </main>
+    </ThemeProvider >
+
   );
 }
 
